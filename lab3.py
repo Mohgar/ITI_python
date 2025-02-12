@@ -2,46 +2,46 @@
 # 1. Write a Python program to read a file line by line
 # and store it into a list. 
 
-# def write_file(filename):
+def write_file(filename):
    
-#     with open(filename, 'r') as file:
+    with open(filename, 'r') as file:
         
-#         lines = file.readlines()
-#         my_list = [line.strip() for line in lines]
+        lines = file.readlines()
+        my_list = [line.strip() for line in lines]
        
-#     return my_list
+    return my_list
 
 
-#     # return my_list
-# try:
-#     print(write_file("file1.txt"))
+    # return my_list
+try:
+    print(write_file("file1.txt"))
 
-# except FileNotFoundError:
-#     print("The file was not found.")
+except FileNotFoundError:
+    print("The file was not found.")
 
-# except Exception as e:
-#     print("An error occurred:", e)
+except Exception as e:
+    print("An error occurred:", e)
 
 #---------------------------------------------------------------------------------#
 #prob 2
 # 2. Create a list of strings , Add to it yourname then
 # Write the list to a new File .
 
-# def write_to_file():
-#     my_list = ["mohamed hgar\n", "heba hgar"]        
-#     with open("file2.txt", 'w', encoding= "utf-8") as file:
-#         for item in my_list:
-#             file.write(item)
+def write_to_file():
+    my_list = ["mohamed hgar\n", "heba hgar"]        
+    with open("file2.txt", 'w', encoding= "utf-8") as file:
+        for item in my_list:
+            file.write(item)
 
-#     with open("file2.txt", 'w', encoding= "utf-8") as file:
-#         file.write("mahmoudhgar\nmena hgar")
+    with open("file2.txt", 'w', encoding= "utf-8") as file:
+        file.write("mahmoudhgar\nmena hgar")
 
     
 
-# try:
-#     write_to_file()
-# except Exception as e :
-#     print("An error occurred:", e)
+try:
+    write_to_file()
+except Exception as e :
+    print("An error occurred:", e)
 
 
 #---------------------------------------------------------------------------------#
@@ -93,22 +93,22 @@ print(multiply_function(3, 6))
 # For example, if the ﬁrst parameter is “eueiieo” and the second is “iieoedue,” then the function should
 # return “d.” 
 
-# def find_extra_char(a:str, b:str):
+def find_extra_char(a:str, b:str):
    
-#     if not isinstance(a, str) or not isinstance(b, str):
-#         raise TypeError("Both parameters should be strings")
+    if not isinstance(a, str) or not isinstance(b, str):
+        raise TypeError("Both parameters should be strings")
     
-#     if abs(len(a.strip())-len(b.strip())) != 1:
-#         raise ValueError("String 'a' should be exactly one character longer than 'b'")
+    if abs(len(a.strip())-len(b.strip())) != 1:
+        raise ValueError("String 'a' should be exactly one character longer than 'b'")
     
-#     for char in b:
-#         if char not in a:
-#             return char
+    for char in b:
+        if char not in a:
+            return char
     
     
         
     
-# print(find_extra_char("eueiieo", "iieoedue"))  
+print(find_extra_char("eueiieo", "iieoedue"))  
 
 #----------------------------------------------------------------
 #prob 2
@@ -119,18 +119,18 @@ print(multiply_function(3, 6))
 # subtracted from 321.
 
 
-# def largest_smallest_difference(num:int):
-#     if not isinstance(num, int):
-#         raise TypeError("The parameter should be an integer")
-#     if num < 10 :
-#         raise ValueError("The number should be at least two digits")
+def largest_smallest_difference(num:int):
+    if not isinstance(num, int):
+        raise TypeError("The parameter should be an integer")
+    if num < 10 :
+        raise ValueError("The number should be at least two digits")
 
-#     digits = [digit for digit in str(num)]
-#     max_num_list = sorted(digits, reverse= True)
-#     max_num = int("".join(max_num_list))
-#     min_num_list  = sorted(digits)
-#     min_num = int("".join(min_num_list))
-#     return max_num-min_num
+    digits = [digit for digit in str(num)]
+    max_num_list = sorted(digits, reverse= True)
+    max_num = int("".join(max_num_list))
+    min_num_list  = sorted(digits)
+    min_num = int("".join(min_num_list))
+    return max_num-min_num
 
-# print(largest_smallest_difference(213))  
+print(largest_smallest_difference(213))  
 
